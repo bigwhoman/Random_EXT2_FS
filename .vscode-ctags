@@ -1,0 +1,145 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/media/bigwhoman/lin3/uoft/previous-labs/hello-ext2/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+BLOCK_BITMAP_BLOCKNO	src/ext2-create.c	/^#define BLOCK_BITMAP_BLOCKNO /;"	d	file:
+BLOCK_GROUP_DESCRIPTOR_BLOCKNO	src/ext2-create.c	/^#define BLOCK_GROUP_DESCRIPTOR_BLOCKNO /;"	d	file:
+BLOCK_OFFSET	src/ext2-create.c	/^#define BLOCK_OFFSET(/;"	d	file:
+BLOCK_SIZE	src/ext2-create.c	/^#define BLOCK_SIZE /;"	d	file:
+EXT2_BAD_INO	src/ext2-create.c	/^#define	EXT2_BAD_INO /;"	d	file:
+EXT2_DIND_BLOCK	src/ext2-create.c	/^#define	EXT2_DIND_BLOCK /;"	d	file:
+EXT2_GOOD_OLD_FIRST_INO	src/ext2-create.c	/^#define EXT2_GOOD_OLD_FIRST_INO /;"	d	file:
+EXT2_GOOD_OLD_REV	src/ext2-create.c	/^#define EXT2_GOOD_OLD_REV /;"	d	file:
+EXT2_IND_BLOCK	src/ext2-create.c	/^#define	EXT2_IND_BLOCK /;"	d	file:
+EXT2_NAME_LEN	src/ext2-create.c	/^#define EXT2_NAME_LEN /;"	d	file:
+EXT2_NDIR_BLOCKS	src/ext2-create.c	/^#define	EXT2_NDIR_BLOCKS /;"	d	file:
+EXT2_N_BLOCKS	src/ext2-create.c	/^#define	EXT2_N_BLOCKS /;"	d	file:
+EXT2_ROOT_INO	src/ext2-create.c	/^#define EXT2_ROOT_INO /;"	d	file:
+EXT2_S_IFBLK	src/ext2-create.c	/^#define EXT2_S_IFBLK /;"	d	file:
+EXT2_S_IFCHR	src/ext2-create.c	/^#define EXT2_S_IFCHR /;"	d	file:
+EXT2_S_IFDIR	src/ext2-create.c	/^#define EXT2_S_IFDIR /;"	d	file:
+EXT2_S_IFIFO	src/ext2-create.c	/^#define EXT2_S_IFIFO /;"	d	file:
+EXT2_S_IFLNK	src/ext2-create.c	/^#define EXT2_S_IFLNK /;"	d	file:
+EXT2_S_IFREG	src/ext2-create.c	/^#define EXT2_S_IFREG /;"	d	file:
+EXT2_S_IFSOCK	src/ext2-create.c	/^#define EXT2_S_IFSOCK /;"	d	file:
+EXT2_S_IRGRP	src/ext2-create.c	/^#define EXT2_S_IRGRP /;"	d	file:
+EXT2_S_IROTH	src/ext2-create.c	/^#define EXT2_S_IROTH /;"	d	file:
+EXT2_S_IRUSR	src/ext2-create.c	/^#define EXT2_S_IRUSR /;"	d	file:
+EXT2_S_ISGID	src/ext2-create.c	/^#define EXT2_S_ISGID /;"	d	file:
+EXT2_S_ISUID	src/ext2-create.c	/^#define EXT2_S_ISUID /;"	d	file:
+EXT2_S_ISVTX	src/ext2-create.c	/^#define EXT2_S_ISVTX /;"	d	file:
+EXT2_S_IWGRP	src/ext2-create.c	/^#define EXT2_S_IWGRP /;"	d	file:
+EXT2_S_IWOTH	src/ext2-create.c	/^#define EXT2_S_IWOTH /;"	d	file:
+EXT2_S_IWUSR	src/ext2-create.c	/^#define EXT2_S_IWUSR /;"	d	file:
+EXT2_S_IXGRP	src/ext2-create.c	/^#define EXT2_S_IXGRP /;"	d	file:
+EXT2_S_IXOTH	src/ext2-create.c	/^#define EXT2_S_IXOTH /;"	d	file:
+EXT2_S_IXUSR	src/ext2-create.c	/^#define EXT2_S_IXUSR /;"	d	file:
+EXT2_TIND_BLOCK	src/ext2-create.c	/^#define	EXT2_TIND_BLOCK /;"	d	file:
+HELLO_INO	src/ext2-create.c	/^#define HELLO_INO /;"	d	file:
+HELLO_WORLD_FILE_BLOCKNO	src/ext2-create.c	/^#define HELLO_WORLD_FILE_BLOCKNO /;"	d	file:
+HELLO_WORLD_INO	src/ext2-create.c	/^#define HELLO_WORLD_INO /;"	d	file:
+INODE_BITMAP_BLOCKNO	src/ext2-create.c	/^#define INODE_BITMAP_BLOCKNO /;"	d	file:
+INODE_TABLE_BLOCKNO	src/ext2-create.c	/^#define INODE_TABLE_BLOCKNO /;"	d	file:
+LAST_BLOCK	src/ext2-create.c	/^#define LAST_BLOCK /;"	d	file:
+LAST_INO	src/ext2-create.c	/^#define LAST_INO /;"	d	file:
+LOST_AND_FOUND_DIR_BLOCKNO	src/ext2-create.c	/^#define LOST_AND_FOUND_DIR_BLOCKNO /;"	d	file:
+LOST_AND_FOUND_INO	src/ext2-create.c	/^#define LOST_AND_FOUND_INO /;"	d	file:
+NUM_BLOCKS	src/ext2-create.c	/^#define NUM_BLOCKS /;"	d	file:
+NUM_FREE_BLOCKS	src/ext2-create.c	/^#define NUM_FREE_BLOCKS /;"	d	file:
+NUM_FREE_INODES	src/ext2-create.c	/^#define NUM_FREE_INODES /;"	d	file:
+NUM_INODES	src/ext2-create.c	/^#define NUM_INODES /;"	d	file:
+ROOT_DIR_BLOCKNO	src/ext2-create.c	/^#define ROOT_DIR_BLOCKNO /;"	d	file:
+SUPERBLOCK_BLOCKNO	src/ext2-create.c	/^#define SUPERBLOCK_BLOCKNO /;"	d	file:
+bg_block_bitmap	src/ext2-create.c	/^	u32 bg_block_bitmap;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u32	file:
+bg_free_blocks_count	src/ext2-create.c	/^	u16 bg_free_blocks_count;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u16	file:
+bg_free_inodes_count	src/ext2-create.c	/^	u16 bg_free_inodes_count;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u16	file:
+bg_inode_bitmap	src/ext2-create.c	/^	u32 bg_inode_bitmap;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u32	file:
+bg_inode_table	src/ext2-create.c	/^	u32 bg_inode_table;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u32	file:
+bg_pad	src/ext2-create.c	/^	u16 bg_pad;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u16	file:
+bg_reserved	src/ext2-create.c	/^	u32 bg_reserved[3];$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u32[3]	file:
+bg_used_dirs_count	src/ext2-create.c	/^	u16 bg_used_dirs_count;$/;"	m	struct:ext2_block_group_descriptor	typeref:typename:u16	file:
+dir_entry_set	src/ext2-create.c	/^#define dir_entry_set(/;"	d	file:
+dir_entry_write	src/ext2-create.c	/^#define dir_entry_write(/;"	d	file:
+errno_exit	src/ext2-create.c	/^#define errno_exit(/;"	d	file:
+ext2_block_group_descriptor	src/ext2-create.c	/^struct ext2_block_group_descriptor$/;"	s	file:
+ext2_dir_entry	src/ext2-create.c	/^struct ext2_dir_entry {$/;"	s	file:
+ext2_inode	src/ext2-create.c	/^struct ext2_inode {$/;"	s	file:
+ext2_superblock	src/ext2-create.c	/^struct ext2_superblock {$/;"	s	file:
+get_current_time	src/ext2-create.c	/^u32 get_current_time() {$/;"	f	typeref:typename:u32
+i16	src/ext2-create.c	/^typedef int16_t i16;$/;"	t	typeref:typename:int16_t	file:
+i32	src/ext2-create.c	/^typedef int32_t i32;$/;"	t	typeref:typename:int32_t	file:
+i_atime	src/ext2-create.c	/^	u32 i_atime;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_block	src/ext2-create.c	/^	u32 i_block[EXT2_N_BLOCKS];$/;"	m	struct:ext2_inode	typeref:typename:u32[]	file:
+i_blocks	src/ext2-create.c	/^	u32 i_blocks;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_ctime	src/ext2-create.c	/^	u32 i_ctime;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_dir_acl	src/ext2-create.c	/^	u32 i_dir_acl;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_dtime	src/ext2-create.c	/^	u32 i_dtime;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_faddr	src/ext2-create.c	/^	u32 i_faddr;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_file_acl	src/ext2-create.c	/^	u32 i_file_acl;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_flags	src/ext2-create.c	/^	u32 i_flags;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_frag	src/ext2-create.c	/^	u8  i_frag;$/;"	m	struct:ext2_inode	typeref:typename:u8	file:
+i_fsize	src/ext2-create.c	/^	u8  i_fsize;$/;"	m	struct:ext2_inode	typeref:typename:u8	file:
+i_gid	src/ext2-create.c	/^	u16 i_gid;$/;"	m	struct:ext2_inode	typeref:typename:u16	file:
+i_links_count	src/ext2-create.c	/^	u16 i_links_count;$/;"	m	struct:ext2_inode	typeref:typename:u16	file:
+i_mode	src/ext2-create.c	/^	u16 i_mode;$/;"	m	struct:ext2_inode	typeref:typename:u16	file:
+i_mtime	src/ext2-create.c	/^	u32 i_mtime;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_pad1	src/ext2-create.c	/^	u16 i_pad1;$/;"	m	struct:ext2_inode	typeref:typename:u16	file:
+i_reserved1	src/ext2-create.c	/^	u32 i_reserved1;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_reserved2	src/ext2-create.c	/^	u32 i_reserved2[2];$/;"	m	struct:ext2_inode	typeref:typename:u32[2]	file:
+i_size	src/ext2-create.c	/^	u32 i_size;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+i_uid	src/ext2-create.c	/^	u16 i_uid;$/;"	m	struct:ext2_inode	typeref:typename:u16	file:
+i_version	src/ext2-create.c	/^	u32 i_version;$/;"	m	struct:ext2_inode	typeref:typename:u32	file:
+inode	src/ext2-create.c	/^	u32	inode;			\/* Inode number *\/$/;"	m	struct:ext2_dir_entry	typeref:typename:u32	file:
+main	build/meson-private/sanitycheckc.c	/^int main(void) { int class=0; return class; }$/;"	f	typeref:typename:int
+main	src/ext2-create.c	/^int main() {$/;"	f	typeref:typename:int
+name	src/ext2-create.c	/^	u8	name[EXT2_NAME_LEN];	\/* File name *\/$/;"	m	struct:ext2_dir_entry	typeref:typename:u8[]	file:
+name_len	src/ext2-create.c	/^	u16	name_len;		\/* name length	*\/$/;"	m	struct:ext2_dir_entry	typeref:typename:u16	file:
+rec_len	src/ext2-create.c	/^	u16	rec_len;		\/* Directory entry length *\/$/;"	m	struct:ext2_dir_entry	typeref:typename:u16	file:
+s_blocks_count	src/ext2-create.c	/^	u32 s_blocks_count;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_blocks_per_group	src/ext2-create.c	/^	u32 s_blocks_per_group;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_checkinterval	src/ext2-create.c	/^	u32 s_checkinterval;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_creator_os	src/ext2-create.c	/^	u32 s_creator_os;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_def_resgid	src/ext2-create.c	/^	u16 s_def_resgid;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_def_resuid	src/ext2-create.c	/^	u16 s_def_resuid;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_errors	src/ext2-create.c	/^	u16 s_errors;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_first_data_block	src/ext2-create.c	/^	u32 s_first_data_block;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_frags_per_group	src/ext2-create.c	/^	u32 s_frags_per_group;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_free_blocks_count	src/ext2-create.c	/^	u32 s_free_blocks_count;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_free_inodes_count	src/ext2-create.c	/^	u32 s_free_inodes_count;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_inodes_count	src/ext2-create.c	/^	u32 s_inodes_count;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_inodes_per_group	src/ext2-create.c	/^	u32 s_inodes_per_group;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_lastcheck	src/ext2-create.c	/^	u32 s_lastcheck;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_log_block_size	src/ext2-create.c	/^	u32 s_log_block_size;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_log_frag_size	src/ext2-create.c	/^	i32 s_log_frag_size;$/;"	m	struct:ext2_superblock	typeref:typename:i32	file:
+s_magic	src/ext2-create.c	/^	u16 s_magic;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_max_mnt_count	src/ext2-create.c	/^	i16 s_max_mnt_count;$/;"	m	struct:ext2_superblock	typeref:typename:i16	file:
+s_minor_rev_level	src/ext2-create.c	/^	u16 s_minor_rev_level;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_mnt_count	src/ext2-create.c	/^	u16 s_mnt_count;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_mtime	src/ext2-create.c	/^	u32 s_mtime;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_pad	src/ext2-create.c	/^	u32 s_pad[5];$/;"	m	struct:ext2_superblock	typeref:typename:u32[5]	file:
+s_r_blocks_count	src/ext2-create.c	/^	u32 s_r_blocks_count;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_reserved	src/ext2-create.c	/^	u32 s_reserved[229];$/;"	m	struct:ext2_superblock	typeref:typename:u32[229]	file:
+s_rev_level	src/ext2-create.c	/^	u32 s_rev_level;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+s_state	src/ext2-create.c	/^	u16 s_state;$/;"	m	struct:ext2_superblock	typeref:typename:u16	file:
+s_uuid	src/ext2-create.c	/^	u8 s_uuid[16];$/;"	m	struct:ext2_superblock	typeref:typename:u8[16]	file:
+s_volume_name	src/ext2-create.c	/^	u8 s_volume_name[16];$/;"	m	struct:ext2_superblock	typeref:typename:u8[16]	file:
+s_wtime	src/ext2-create.c	/^	u32 s_wtime;$/;"	m	struct:ext2_superblock	typeref:typename:u32	file:
+u16	src/ext2-create.c	/^typedef uint16_t u16;$/;"	t	typeref:typename:uint16_t	file:
+u32	src/ext2-create.c	/^typedef uint32_t u32;$/;"	t	typeref:typename:uint32_t	file:
+u8	src/ext2-create.c	/^typedef uint8_t u8;$/;"	t	typeref:typename:uint8_t	file:
+write_block_bitmap	src/ext2-create.c	/^void write_block_bitmap(int fd) {$/;"	f	typeref:typename:void
+write_block_group_descriptor_table	src/ext2-create.c	/^void write_block_group_descriptor_table(int fd) {$/;"	f	typeref:typename:void
+write_hello_world_file_block	src/ext2-create.c	/^void write_hello_world_file_block(int fd) {$/;"	f	typeref:typename:void
+write_inode	src/ext2-create.c	/^void write_inode(int fd, u32 index, struct ext2_inode *inode) {$/;"	f	typeref:typename:void
+write_inode_bitmap	src/ext2-create.c	/^void write_inode_bitmap(int fd) {$/;"	f	typeref:typename:void
+write_inode_table	src/ext2-create.c	/^void write_inode_table(int fd) {$/;"	f	typeref:typename:void
+write_lost_and_found_dir_block	src/ext2-create.c	/^void write_lost_and_found_dir_block(int fd) {$/;"	f	typeref:typename:void
+write_root_dir_block	src/ext2-create.c	/^void write_root_dir_block(int fd) {$/;"	f	typeref:typename:void
+write_superblock	src/ext2-create.c	/^void write_superblock(int fd) {$/;"	f	typeref:typename:void

@@ -307,7 +307,7 @@ void write_superblock(int fd)
 
 void write_block_group_descriptor_table(int fd)
 {
-	off_t off = lseek(fd, BLOCK_OFFSET(2), SEEK_SET);
+	off_t off = lseek(fd, BLOCK_OFFSET(BLOCK_GROUP_DESCRIPTOR_BLOCKNO), SEEK_SET);
 	if (off == -1)
 	{
 		errno_exit("lseek");
@@ -317,9 +317,9 @@ void write_block_group_descriptor_table(int fd)
 
 	/* These are intentionally incorrectly set as 0, you should set them
 	   correctly and delete this comment */
-	block_group_descriptor.bg_block_bitmap = 0;
-	block_group_descriptor.bg_inode_bitmap = 0;
-	block_group_descriptor.bg_inode_table = 0;
+	block_group_descriptor.bg_block_bitmap = BLOCK_BITMAP_BLOCKNO;
+	block_group_descriptor.bg_inode_bitmap = INODE_BITMAP_BLOCKNO;
+	block_group_descriptor.bg_inode_table = INODE_TABLE_BLOCKNO;
 	block_group_descriptor.bg_free_blocks_count = 0;
 	block_group_descriptor.bg_free_inodes_count = 0;
 	block_group_descriptor.bg_used_dirs_count = 0;

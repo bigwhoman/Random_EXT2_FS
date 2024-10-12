@@ -40,12 +40,11 @@ typedef int32_t i32;
 
 #define MAX_INTERVAL 1
 
-
-#define EXT2_OS_LINUX	0	
-#define EXT2_OS_HURD	1	
-#define EXT2_OS_MASIX	2
-#define EXT2_OS_FREEBSD	3	
-#define EXT2_OS_LITES	4	
+#define EXT2_OS_LINUX 0
+#define EXT2_OS_HURD 1
+#define EXT2_OS_MASIX 2
+#define EXT2_OS_FREEBSD 3
+#define EXT2_OS_LITES 4
 
 #define EXT2_BAD_INO 1
 #define EXT2_ROOT_INO 2
@@ -239,14 +238,14 @@ void write_superblock(int fd)
 	int log_block_size = 0;
 	while (standard_size < BLOCK_SIZE)
 	{
-		log_block_size ++;
+		log_block_size++;
 	}
 
 	int standard_fragment_size = 1024;
 	int log_fragment_size = 0;
 	while (standard_fragment_size < BLOCK_SIZE)
 	{
-		log_fragment_size ++;
+		log_fragment_size++;
 	}
 
 	/* These are intentionally incorrectly set as 0, you should set them
@@ -257,25 +256,25 @@ void write_superblock(int fd)
 	superblock.s_free_blocks_count = NUM_FREE_BLOCKS;
 	superblock.s_free_inodes_count = NUM_FREE_INODES;
 	superblock.s_first_data_block = FIRST_DATA_BLOCK; /* First Data Block */
-	superblock.s_log_block_size = log_block_size;				  /* 1024 */
-	superblock.s_log_frag_size = log_fragment_size;					  /* 1024 */
+	superblock.s_log_block_size = log_block_size;	  /* 1024 */
+	superblock.s_log_frag_size = log_fragment_size;	  /* 1024 */
 	superblock.s_blocks_per_group = BLOCKS_PER_GROUP;
 	superblock.s_frags_per_group = FRAGMENTS_PER_GROUP;
-	superblock.s_inodes_per_group = NUM_INODES/(1 + NUM_BLOCKS / BLOCKS_PER_GROUP);
-	superblock.s_mtime = current_time;			  /* Mount time */
-	superblock.s_wtime = current_time;			  /* Write time */
-	superblock.s_mnt_count = 0;		  /* Number of times mounted so far */
-	superblock.s_max_mnt_count = INT16_MAX;	  /* Make this unlimited */
-	superblock.s_magic = EXT2_SUPER_MAGIC;			  /* ext2 Signature */
-	superblock.s_state = EXT2_VALID_FS;			  /* File system is clean */
-	superblock.s_errors = EXT2_ERRORS_CONTINUE;		  /* Ignore the error (continue on) */
-	superblock.s_minor_rev_level = 0; /* Leave this as 0 */
-	superblock.s_lastcheck = current_time;		  /* Last check time */
-	superblock.s_checkinterval = MAX_INTERVAL;	  /* Force checks by making them every 1 second */
-	superblock.s_creator_os = EXT2_OS_LINUX;	  /* Linux */
-	superblock.s_rev_level = EXT2_GOOD_OLD_REV;		  /* Leave this as 0 */
-	superblock.s_def_resuid = EXT2_DEF_RESUID;	  /* root */
-	superblock.s_def_resgid = EXT2_DEF_RESGID;	  /* root */
+	superblock.s_inodes_per_group = NUM_INODES / (1 + NUM_BLOCKS / BLOCKS_PER_GROUP);
+	superblock.s_mtime = current_time;			/* Mount time */
+	superblock.s_wtime = current_time;			/* Write time */
+	superblock.s_mnt_count = 0;					/* Number of times mounted so far */
+	superblock.s_max_mnt_count = INT16_MAX;		/* Make this unlimited */
+	superblock.s_magic = EXT2_SUPER_MAGIC;		/* ext2 Signature */
+	superblock.s_state = EXT2_VALID_FS;			/* File system is clean */
+	superblock.s_errors = EXT2_ERRORS_CONTINUE; /* Ignore the error (continue on) */
+	superblock.s_minor_rev_level = 0;			/* Leave this as 0 */
+	superblock.s_lastcheck = current_time;		/* Last check time */
+	superblock.s_checkinterval = MAX_INTERVAL;	/* Force checks by making them every 1 second */
+	superblock.s_creator_os = EXT2_OS_LINUX;	/* Linux */
+	superblock.s_rev_level = EXT2_GOOD_OLD_REV; /* Leave this as 0 */
+	superblock.s_def_resuid = EXT2_DEF_RESUID;	/* root */
+	superblock.s_def_resgid = EXT2_DEF_RESGID;	/* root */
 
 	/* You can leave everything below this line the same, delete this
 	   comment when you're done the lab */
@@ -320,9 +319,9 @@ void write_block_group_descriptor_table(int fd)
 	block_group_descriptor.bg_block_bitmap = BLOCK_BITMAP_BLOCKNO;
 	block_group_descriptor.bg_inode_bitmap = INODE_BITMAP_BLOCKNO;
 	block_group_descriptor.bg_inode_table = INODE_TABLE_BLOCKNO;
-	block_group_descriptor.bg_free_blocks_count = 0;
-	block_group_descriptor.bg_free_inodes_count = 0;
-	block_group_descriptor.bg_used_dirs_count = 0;
+	block_group_descriptor.bg_free_blocks_count = NUM_FREE_BLOCKS;
+	block_group_descriptor.bg_free_inodes_count = NUM_FREE_INODES;
+	block_group_descriptor.bg_used_dirs_count = 2;
 
 	ssize_t size = sizeof(block_group_descriptor);
 	if (write(fd, &block_group_descriptor, size) != size)
@@ -331,14 +330,53 @@ void write_block_group_descriptor_table(int fd)
 	}
 }
 
+void set_bitmap(char * bitmap, uint16_t bit){
+	uint16_t bit_group = bit / 8;
+	uint16_t bit_offset = bit % 8;
+	bitmap[bit_group] = bitmap[bit_group] | (1 << bit_offset);
+}
+
 void write_block_bitmap(int fd)
 {
-	/* This is all you */
+	off_t off = lseek(fd, BLOCK_OFFSET(BLOCK_BITMAP_BLOCKNO), SEEK_SET);
+	if (off == -1)
+	{
+		errno_exit("lseek");
+	}
+	char initials[BLOCK_SIZE] = {0};
+	for (size_t i = 0; i < LAST_BLOCK; i++)
+	{
+		set_bitmap(initials, i);
+	}
+	
+	if ((write(fd, initials, BLOCK_SIZE)) != BLOCK_SIZE)
+	{
+		errno_exit("write");
+	}
 }
+
+
 
 void write_inode_bitmap(int fd)
 {
-	/* This is all you */
+	off_t off = lseek(fd, BLOCK_OFFSET(INODE_BITMAP_BLOCKNO), SEEK_SET);
+	if (off == -1)
+	{
+		errno_exit("lseek");
+	}
+	char initials[BLOCK_SIZE] = {0};
+	for (size_t i = 0; i < 11; i++)
+	{
+		set_bitmap(initials, i);
+	}
+	set_bitmap(initials, LOST_AND_FOUND_INO);
+	set_bitmap(initials, HELLO_WORLD_INO);
+	// set_bitmap(initials, HELLO_INO);
+	/* The first 11 bits in the bitmap should be considered as used in revision 0 of EXT2*/
+	if ((write(fd, initials , BLOCK_SIZE)) != BLOCK_SIZE)
+	{
+		errno_exit("write");
+	}
 }
 
 void write_inode(int fd, u32 index, struct ext2_inode *inode)
@@ -377,11 +415,48 @@ void write_inode_table(int fd)
 
 	/* You should add your 3 other inodes in this function and delete this
 	   comment */
+
+	struct ext2_inode root_inode = {0};
+	root_inode.i_mode = EXT2_S_IFDIR | EXT2_S_IRUSR | EXT2_S_IWUSR | EXT2_S_IXUSR | EXT2_S_IRGRP | EXT2_S_IXGRP | EXT2_S_IROTH | EXT2_S_IXOTH;
+	root_inode.i_uid = 0;
+	root_inode.i_size = 1024;
+	root_inode.i_atime = current_time;
+	root_inode.i_ctime = current_time;
+	root_inode.i_mtime = current_time;
+	root_inode.i_dtime = 0;
+	root_inode.i_gid = 0;
+	root_inode.i_links_count = 2;
+	root_inode.i_blocks = 2; /* These are oddly 512 blocks */
+	root_inode.i_block[0] = ROOT_DIR_BLOCKNO;
+	write_inode(fd, EXT2_ROOT_INO, &root_inode);
 }
 
 void write_root_dir_block(int fd)
 {
 	/* This is all you */
+	off_t off = BLOCK_OFFSET(ROOT_DIR_BLOCKNO);
+	off = lseek(fd, off, SEEK_SET);
+	if (off == -1)
+	{
+		errno_exit("lseek");
+	}
+	ssize_t bytes_remaining = BLOCK_SIZE;
+
+	struct ext2_dir_entry current_entry = {0};
+	dir_entry_set(current_entry, EXT2_ROOT_INO, ".");
+	dir_entry_write(current_entry, fd);
+
+	bytes_remaining -= current_entry.rec_len;
+
+	struct ext2_dir_entry parent_entry = {0};
+	dir_entry_set(parent_entry, EXT2_ROOT_INO, "..");
+	dir_entry_write(parent_entry, fd);
+
+	bytes_remaining -= parent_entry.rec_len;
+
+	struct ext2_dir_entry fill_entry = {0};
+	fill_entry.rec_len = bytes_remaining;
+	dir_entry_write(fill_entry, fd);
 }
 
 void write_lost_and_found_dir_block(int fd)

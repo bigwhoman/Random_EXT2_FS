@@ -425,7 +425,7 @@ void write_inode_table(int fd)
 	root_inode.i_mtime = current_time;
 	root_inode.i_dtime = 0;
 	root_inode.i_gid = 0;
-	root_inode.i_links_count = 2;
+	root_inode.i_links_count = 3;
 	root_inode.i_blocks = 2; /* These are oddly 512 blocks */
 	root_inode.i_block[0] = ROOT_DIR_BLOCKNO;
 	write_inode(fd, EXT2_ROOT_INO, &root_inode);
@@ -453,6 +453,12 @@ void write_root_dir_block(int fd)
 	dir_entry_write(parent_entry, fd);
 
 	bytes_remaining -= parent_entry.rec_len;
+
+	struct ext2_dir_entry lost_found = {0};
+	dir_entry_set(lost_found, LOST_AND_FOUND_INO, "lost+found");
+	dir_entry_write(lost_found, fd);
+
+	bytes_remaining -= lost_found.rec_len;
 
 	struct ext2_dir_entry fill_entry = {0};
 	fill_entry.rec_len = bytes_remaining;

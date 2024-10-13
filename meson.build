@@ -9,3 +9,8 @@ ext2_create_exe = executable(
   'ext2-create',
   'src/ext2-create.c',
 )
+
+filesystem_explorer_exe = executable(
+  'fs-explorer',
+  'src/fs-explorer.c',
+)

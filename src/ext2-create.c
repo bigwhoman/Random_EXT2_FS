@@ -264,7 +264,7 @@ void write_superblock(int fd)
 	superblock.s_mtime = current_time;			/* Mount time */
 	superblock.s_wtime = current_time;			/* Write time */
 	superblock.s_mnt_count = 0;					/* Number of times mounted so far */
-	superblock.s_max_mnt_count = INT16_MAX;		/* Make this unlimited */
+	superblock.s_max_mnt_count = -1;		/* Make this unlimited */
 	superblock.s_magic = EXT2_SUPER_MAGIC;		/* ext2 Signature */
 	superblock.s_state = EXT2_VALID_FS;			/* File system is clean */
 	superblock.s_errors = EXT2_ERRORS_CONTINUE; /* Ignore the error (continue on) */
@@ -550,7 +550,7 @@ void write_hello_world_file_block(int fd)
 		errno_exit("lseek");
 	}
 	// ssize_t bytes_remaining = BLOCK_SIZE;
-	char hello_world[] = "hello world";
+	char hello_world[] = "Hello world\n";
 	write(fd, hello_world,sizeof(hello_world));
 
 }

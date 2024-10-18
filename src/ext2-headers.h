@@ -117,7 +117,12 @@ struct ext2_superblock
 	u32 s_rev_level;
 	u16 s_def_resuid;
 	u16 s_def_resgid;
-	u32 s_pad[5];
+	u32 s_first_ino;
+	u16 s_inode_size;
+	u16 s_block_group_nr;
+	u32 s_feature_compat;
+	u32 s_feature_incompat;
+	u32 s_feature_ro_compat;
 	u8 s_uuid[16];
 	u8 s_volume_name[16];
 	u32 s_reserved[229];
